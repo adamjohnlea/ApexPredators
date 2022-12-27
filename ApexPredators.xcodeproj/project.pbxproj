@@ -13,6 +13,7 @@
 		DE8077E0295B627600AC9440 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8077DF295B627600AC9440 /* Preview Assets.xcassets */; };
 		DE8077E7295B62B400AC9440 /* jpapexpredators.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8077E6295B62B400AC9440 /* jpapexpredators.json */; };
 		DE8077E9295B655300AC9440 /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8077E8295B655300AC9440 /* ApexPredator.swift */; };
+		DE8077EB295B67BC00AC9440 /* ApexPredatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8077EA295B67BC00AC9440 /* ApexPredatorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DE8077DF295B627600AC9440 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE8077E6295B62B400AC9440 /* jpapexpredators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jpapexpredators.json; sourceTree = "<group>"; };
 		DE8077E8295B655300AC9440 /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
+		DE8077EA295B67BC00AC9440 /* ApexPredatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredatorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				DE8077D8295B627500AC9440 /* ApexPredatorsApp.swift */,
 				DE8077E8295B655300AC9440 /* ApexPredator.swift */,
+				DE8077EA295B67BC00AC9440 /* ApexPredatorController.swift */,
 				DE8077DA295B627500AC9440 /* ContentView.swift */,
 				DE8077E6295B62B400AC9440 /* jpapexpredators.json */,
 				DE8077DC295B627600AC9440 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				DE8077DB295B627500AC9440 /* ContentView.swift in Sources */,
 				DE8077E9295B655300AC9440 /* ApexPredator.swift in Sources */,
+				DE8077EB295B67BC00AC9440 /* ApexPredatorController.swift in Sources */,
 				DE8077D9295B627500AC9440 /* ApexPredatorsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
