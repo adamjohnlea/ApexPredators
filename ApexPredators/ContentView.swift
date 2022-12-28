@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     let apController = PredatorController()
+    @State var updatedDinos: [ApexPredator] = []
     @State var sortAlphabetical = false
     @State var currentFilter = "All"
+    @State var text = ""
     
     var body: some View {
         apController.filterBy(type: currentFilter)
@@ -24,13 +26,25 @@ struct ContentView: View {
         
         return NavigationView {
             List {
-                ForEach(apController.apexPredators) { predator in
-                    NavigationLink(destination: PredatorDetail(predator: predator)) {
-                        PredatorRow(predator: predator)
+                if text == "" {
+                    ForEach(apController.apexPredators) { predator in
+                        NavigationLink(destination: PredatorDetail(predator: predator)) {
+                            PredatorRow(predator: predator)
+                        }
+                    }
+                } else {
+                    ForEach(updatedDinos) { predator in
+                        NavigationLink(destination: PredatorDetail(predator: predator)) {
+                            PredatorRow(predator: predator)
+                        }
                     }
                 }
             }
             .navigationTitle("Apex Predators")
+            .searchable(text: $text)
+            .onChange(of: text) { searchValue in
+                updatedDinos = apController.apexPredators.filter {$0.name.contains(searchValue)}
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
