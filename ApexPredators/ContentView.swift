@@ -41,7 +41,7 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Apex Predators")
-            .searchable(text: $text)
+            .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always), prompt: "Dinosaur Search")
             .onChange(of: text) { searchValue in
                 updatedDinos = apController.apexPredators.filter {$0.name.contains(searchValue)}
             }

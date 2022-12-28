@@ -44,6 +44,7 @@ struct PredatorDetail: View {
                         Text(scene.movie)
                             .font(.title2)
                             .padding([.top, .bottom], 1)
+                            .fontWeight(.bold)
                         
                         Text(scene.sceneDescription)
                             .padding(.bottom, 15)
@@ -52,8 +53,10 @@ struct PredatorDetail: View {
                         .font(.caption)
                     Link(predator.link, destination: URL(string: predator.link)!)
                         .font(.caption)
+                        .foregroundColor(.blue)
                 }
                 .padding(.top, -220)
+                .padding([.bottom, .leading, .trailing], 22)
             }
         }
         .edgesIgnoringSafeArea(.top)
