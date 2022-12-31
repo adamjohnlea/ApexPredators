@@ -11,19 +11,20 @@ struct PredatorDetail: View {
     let predator: ApexPredator
     
     var body: some View {
-        NavigationLink(destination: PredatorLargeImage(predator: predator)) {
         ScrollView {
             VStack(alignment: .trailing) {
                 Image(predator.type)
                     .resizable()
                     .scaledToFit()
-                Image(predator.name.lowercased().filter { $0 != " " })
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height/4)
-                    .shadow(color: .black, radius: 6, x:0, y:0)
-                    .offset(y: -210)
+                NavigationLink(destination: PredatorLargeImage(predator: predator))  {
+                    Image(predator.name.lowercased().filter { $0 != " " })
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height/4)
+                        .shadow(color: .black, radius: 6, x:0, y:0)
+                        //.offset(y: -210)
                     .rotation3DEffect(.degrees(180), axis: (x:0, y:1, z:0))
+                }.offset(y: -210)
                 VStack(alignment: .leading) {
                     Text(predator.name)
                         .font(.largeTitle)
@@ -60,11 +61,10 @@ struct PredatorDetail: View {
                 .padding(.top, -220)
                 .padding([.bottom, .leading, .trailing], 22)
             }
-            
         }
         .edgesIgnoringSafeArea(.top)
         .foregroundColor(.white)
-    }
+
     }
 }
 

@@ -18,7 +18,7 @@ struct PredatorLargeImage: View {
                 .shadow(color: .white, radius: 6, x:0, y:0)
                 .offset(y: -210)
                 .rotation3DEffect(.degrees(180), axis: (x:0, y:1, z:0))
-            .padding(.top, 50)
+            .padding(.top, 90)
         
     }
 }
