@@ -11,6 +11,7 @@ struct PredatorDetail: View {
     let predator: ApexPredator
     
     var body: some View {
+        NavigationLink(destination: PredatorLargeImage(predator: predator)) {
         ScrollView {
             VStack(alignment: .trailing) {
                 Image(predator.type)
@@ -48,6 +49,7 @@ struct PredatorDetail: View {
                         
                         Text(scene.sceneDescription)
                             .padding(.bottom, 15)
+                            .multilineTextAlignment(.leading)
                     }
                     Text("Read More:")
                         .font(.caption)
@@ -58,8 +60,11 @@ struct PredatorDetail: View {
                 .padding(.top, -220)
                 .padding([.bottom, .leading, .trailing], 22)
             }
+            
         }
         .edgesIgnoringSafeArea(.top)
+        .foregroundColor(.white)
+    }
     }
 }
 
